@@ -1,8 +1,11 @@
-# Hardhat Hackathon Boilerplate
+# Hardhat React TypeChain Template
 
-This repository contains a sample project that you can use as the starting point
-for your Ethereum project. It's also a great fit for learning the basics of
+This repository is a fork of the amazing <a href="https://github.com/nomiclabs/hardhat-hackathon-boilerplate">hardhat-hackathon-boilerplate</a> by Nomic Labs.
+Their boilerplate is a sample project that anyone can use as the starting point
+for an Ethereum project. It's also a great fit for learning the basics of
 smart contract development.
+
+<b>This fork converts the scripts from Javascript to Typescript and adds TypeChain support</b>
 
 This project is intended to be used with the
 [Hardhat Beginners Tutorial](https://hardhat.org/tutorial), but you should be
@@ -15,8 +18,8 @@ The first things you need to do are cloning this repository and installing its
 dependencies:
 
 ```sh
-git clone https://github.com/nomiclabs/hardhat-hackathon-boilerplate.git
-cd hardhat-hackathon-boilerplate
+git clone https://github.com/willhennessy/hardhat-react-typechain-template.git
+cd hardhat-react-typechain-template
 npm install
 ```
 
@@ -30,7 +33,7 @@ Then, on a new terminal, go to the repository's root folder and run this to
 deploy your contract:
 
 ```sh
-npx hardhat run scripts/deploy.js --network localhost
+npx hardhat run scripts/deploy.ts --network localhost
 ```
 
 Finally, we can run the frontend with:
