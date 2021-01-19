@@ -1,6 +1,6 @@
 import React from "react";
 
-export function TransactionErrorMessage({ message, dismiss }) {
+export function TransactionErrorMessage({ message, dismiss }: {message: string, dismiss: () => void}) {
   return (
     <div className="alert alert-danger" role="alert">
       Error sending transaction: {message.substring(0, 100)}

@@ -2,7 +2,7 @@ import React from "react";
 
 import { NetworkErrorMessage } from "./NetworkErrorMessage";
 
-export function ConnectWallet({ connectWallet, networkError, dismiss }) {
+export function ConnectWallet({ connectWallet, networkError, dismiss }: {connectWallet: () => Promise<void>, networkError?: string, dismiss: () => void}) {
   return (
     <div className="container">
       <div className="row justify-content-md-center">

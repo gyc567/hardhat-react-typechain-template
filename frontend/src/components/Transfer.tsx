@@ -1,6 +1,7 @@
 import React from "react";
+import { BigNumber } from "ethers";
 
-export function Transfer({ transferTokens, tokenSymbol }) {
+export function Transfer({ transferTokens, tokenSymbol }: {transferTokens: (arg0: string, arg1: BigNumber) => Promise<void>, tokenSymbol: string}) {
   return (
     <div>
       <h4>Transfer</h4>
@@ -10,9 +11,9 @@ export function Transfer({ transferTokens, tokenSymbol }) {
           // form's data.
           event.preventDefault();
 
-          const formData = new FormData(event.target);
-          const to = formData.get("to");
-          const amount = formData.get("amount");
+          const formData = new FormData(event.target as HTMLFormElement);
+          const to = formData.get("to") as string;
+          const amount = BigNumber.from(formData.get("amount"));
 
           if (to && amount) {
             transferTokens(to, amount);

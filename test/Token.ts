@@ -3,8 +3,8 @@
 
 // Hardhat tests are normally written with Mocha and Chai.
 
-// We import Chai to use its asserting functions here.
-const { expect } = require("chai");
+import { ethers, waffle } from 'hardhat';
+import { assert, expect, use } from 'chai';
 
 // `describe` is a Mocha function that allows you to organize your tests. It's
 // not actually needed, but having your tests organized makes debugging them
