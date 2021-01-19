@@ -5,7 +5,7 @@ Their boilerplate is a sample project that anyone can use as the starting point
 for an Ethereum project. It's also a great fit for learning the basics of
 smart contract development.
 
-<b>This fork converts the scripts from Javascript to Typescript and adds TypeChain support</b>
+<b>This fork converts the scripts from Javascript to Typescript and adds <a href="https://github.com/ethereum-ts/TypeChain">TypeChain</a> support</b>
 
 This project is intended to be used with the
 [Hardhat Beginners Tutorial](https://hardhat.org/tutorial), but you should be
