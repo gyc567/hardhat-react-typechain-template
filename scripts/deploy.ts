@@ -1,3 +1,4 @@
+// @ts-ignore
 import { artifacts, ethers, network } from "hardhat";
 
 // This is a script for deploying your contracts. You can adapt it to deploy
@@ -26,6 +27,15 @@ async function main() {
   await token.deployed();
 
   console.log("Token address:", token.address);
+
+  // We also save the contract's artifacts and address in the frontend directory
+  saveFrontendFiles(token);
+
+  const LendH = await ethers.getContractFactory("LendH");
+  const lendH = await LendH.deploy("0x9c0cc94800525b493115a68bef4f827cbdcec7b3");
+  await lendH.deployed();
+
+  console.log("lendH contract address:", lendH.address);
 
   // We also save the contract's artifacts and address in the frontend directory
   saveFrontendFiles(token);
