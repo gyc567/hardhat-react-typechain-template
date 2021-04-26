@@ -2,6 +2,7 @@ import { task } from "hardhat/config";
 import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-waffle";
 import "hardhat-typechain";
+import {accounts, node_url} from "./utils/network";
 
 // The next line is part of the sample project, you don't need it in your
 // project. It imports a Hardhat task definition, that can be used for
@@ -17,8 +18,6 @@ task("accounts", "Prints the list of accounts", async (args, hre) => {
   }
 });
 
-// You need to export an object to set up your config
-// Go to https://hardhat.org/config/ to learn more
 
 /**
  * @type import('hardhat/config').HardhatUserConfig
@@ -32,5 +31,11 @@ export default {
   //   hardhat: {
   //     chainId: 1337
   //   },
-  // }  
+  // }
+  networks: {
+    kovan: {
+      url: node_url('kovan'),
+      accounts: accounts('kovan'),
+    }
+  }
 };

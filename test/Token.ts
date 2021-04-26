@@ -3,6 +3,7 @@
 
 // Hardhat tests are normally written with Mocha and Chai.
 
+// @ts-ignore
 import { ethers, waffle } from 'hardhat';
 import { assert, expect, use } from 'chai';
 
@@ -59,6 +60,7 @@ describe("Token contract", function () {
 
       // This test expects the owner variable stored in the contract to be equal
       // to our Signer's owner.
+        console.log("ower address:",owner.address);
       expect(await hardhatToken.owner()).to.equal(owner.address);
     });
 
@@ -93,6 +95,7 @@ describe("Token contract", function () {
 
       // Try to send 1 token from addr1 (0 tokens) to owner (1000 tokens).
       // `require` will evaluate false and revert the transaction.
+      // @ts-ignore
       await expect(
         hardhatToken.connect(addr1).transfer(owner.address, 1)
       ).to.be.revertedWith("Not enough tokens");
