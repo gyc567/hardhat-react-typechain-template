@@ -23,9 +23,10 @@ typechain
 # misc
 .DS_Store
 .env*contracts/
-!/.idea/
-!/artifacts/
-!/cache/
-!/typechain/
-!/.env
+.idea/
+/artifacts/
+/cache/
+/typechain/
+/.env
+
 

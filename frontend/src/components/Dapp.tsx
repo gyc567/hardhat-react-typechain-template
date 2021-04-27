@@ -200,9 +200,9 @@ export class Dapp extends React.Component<MainProps, MainState> {
     // Once we have the address, we can initialize the application.
 
     // First we check the network
-    if (!this._checkNetwork()) {
-      return;
-    }
+    // if (!this._checkNetwork()) {
+    //   return;
+    // }
 
     this._initialize(selectedAddress);
 
